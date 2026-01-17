@@ -1,4 +1,5 @@
 from core.tts import speak
+from modules.commands.web_apps import web_commands
 
 def command_prompt():
     while True:
@@ -20,6 +21,13 @@ def command_prompt():
             print(reply)
             speak(reply)
             break
+        
+        elif cmd=="what features do you have":
+            print("I can automate things for you..This is my feature list:-\nIntroduction of myself\ncan speak output\n")
+            speak("I can automate things for you..This is my feature list")
 
+        elif "open" in cmd:
+            web_commands(cmd)
+    
         else:
             print("This is command is not available.")
