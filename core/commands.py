@@ -1,5 +1,6 @@
 from core.tts import speak
 from modules.commands.web_apps import web_commands
+from modules.commands.jokes import jokes
 
 def command_prompt():
     while True:
@@ -28,6 +29,9 @@ def command_prompt():
 
         elif "open" in cmd:
             web_commands(cmd)
+        
+        elif "joke" in cmd:
+            jokes(cmd)
     
         else:
             print("This is command is not available.")

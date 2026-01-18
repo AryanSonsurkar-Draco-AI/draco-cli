@@ -1,7 +1,5 @@
 import os
 from core.commands import command_prompt
-from core.tts import speak
-from modules.commands.web_apps import web_commands
 
 def main():
     print("----------------------")
