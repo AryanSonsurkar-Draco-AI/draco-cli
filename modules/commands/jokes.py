@@ -12,8 +12,7 @@ jokes_list =[
         "I dream in Python, but I debug in nightmares."
     ]
 
-def jokes(cmd):
-    if "joke" in cmd:
+def jokes():
         reply = random.choice(jokes_list)
         print(reply)
         speak(reply)

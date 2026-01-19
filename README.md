@@ -22,7 +22,8 @@ Currently supports opening commonly used developers and social websites.More sit
 - Open websites
 - Includes a fun programming jokes command
 - Includes System info like your username, current directory and your OS
-- Tells todays date and time
+- datetime command with formatted date and time
+- Notes Management
 
 ---
 
@@ -40,6 +41,8 @@ Currently supports opening commonly used developers and social websites.More sit
 - open youtube
 - joke
 - system info or my pc
+- date or time
+- note show , note clear and note add <text>
 - help
 
 ---

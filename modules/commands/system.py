@@ -20,6 +20,10 @@ def system_status():
     speak(info)
 
 def datetime_info():
-    reply = datetime.now()
+    now = datetime.now()
+    date = now.strftime("%d %B %Y")
+    time = now.strftime("%I:%M %p")
+    day = now.strftime("%A")
+    reply=f"Today is {day}, {date}. Time is {time}"
     print(reply)
     speak(reply)

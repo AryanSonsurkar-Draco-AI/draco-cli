@@ -2,6 +2,7 @@ from core.tts import speak
 from modules.commands.web_apps import web_commands
 from modules.commands.jokes import jokes
 from modules.commands.system import system_status, datetime_info
+from modules.commands.notes import notes
 
 def command_prompt():
     while True:
@@ -32,7 +33,7 @@ def command_prompt():
             web_commands(cmd)
         
         elif "joke" in cmd:
-            jokes(cmd)
+            jokes()
         
         elif "help" in cmd or "commands" in cmd:
              print("Available Commands:\n- who are you\n- who created you\n- open github\n- open youtube\n- open leetcode\n- joke\n- exit")
@@ -44,5 +45,8 @@ def command_prompt():
         elif "today's date" in cmd or "date" in cmd or "time" in cmd:
             datetime_info()
             
+        elif "note" in cmd:
+            notes(cmd)
+
         else:
             print("This is command is not available.")
