@@ -20,7 +20,7 @@ def command_prompt():
             print(reply)
             speak(reply)
 
-        elif cmd=="exit":
+        elif cmd=="exit" or cmd=="quit":
             reply = "Goodbye Bro!!!"
             print(reply)
             speak(reply)
@@ -51,6 +51,21 @@ def command_prompt():
         
         elif "remind me" in cmd:
             remind(cmd)
+        
+        elif "introduce yourself" in cmd or "introduce" in cmd:
+            reply = """Hello. I am Draco.
+            A terminal-based assistant designed for automation,focus,and efficiency.
+
+            I can help you with:
+            - Quick Commands
+            - System Utilities
+            - Notes and reminders
+            - Productivity and automation tasks
+
+            Try: system status | note | remind me
+            """
+            print(reply)
+            speak(reply)
 
         else:
-            print("This is command is not available.")
+            print("This command is not available.")

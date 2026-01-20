@@ -25,6 +25,7 @@ Currently supports opening commonly used developers and social websites.More sit
 - datetime command with formatted date and time
 - Notes Management
 - Reminder System
+- Self-Introduction
 
 ---
 
@@ -45,6 +46,7 @@ Currently supports opening commonly used developers and social websites.More sit
 - date or time
 - note show , note clear and note add <text>
 - remind me to study in 2 hours
+- introduce or introduce yourself
 - help
 
 ---
