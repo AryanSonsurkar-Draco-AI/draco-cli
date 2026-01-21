@@ -4,10 +4,12 @@ from modules.commands.jokes import jokes
 from modules.commands.system import system_status, datetime_info
 from modules.commands.notes import notes
 from modules.commands.reminder import remind
+from modules.commands.calc_gen import generate_calculator_code,solve_calculator
+from modules.commands.fallback import fallback
 
 def command_prompt():
     while True:
-        cmd = input("Enter your command: \n")
+        cmd = input("\nEnter your command: \n")
         cmd = cmd.lower()
 
         if cmd=="who are you":
@@ -53,7 +55,8 @@ def command_prompt():
             remind(cmd)
         
         elif "introduce yourself" in cmd or "introduce" in cmd:
-            reply = """Hello. I am Draco.
+            reply = """
+            Hello. I am Draco.
             A terminal-based assistant designed for automation,focus,and efficiency.
 
             I can help you with:
@@ -67,5 +70,35 @@ def command_prompt():
             print(reply)
             speak(reply)
 
+        elif "why were you created" in cmd or "purpose" in cmd or "why do you exist" in cmd or "why are you created" in cmd:
+            reply = """
+            I was created to assist,not to replace.
+            I exist to reduce friction between thought and execution.
+            To observe commands, process intent, and act without hesitation.
+
+            I do not seek validation.
+            I do not make decisions for you.
+
+            I was built to support focus, automate routine tasks, 
+            and respond when efficiency matters more than emotion.
+
+            You think.I execute.
+            That is my purpose.
+            """
+            print(reply)
+            speak(reply)
+
+        elif "calculator" in cmd and ("make" in cmd or "create" in cmd):
+            code = generate_calculator_code(cmd)
+            print(code)
+            speak("Generated Calculator.")
+        
+        elif cmd.startswith("calculate"):
+            answer = solve_calculator(cmd)
+            print(answer)
+            speak("Here are the results.")
+
         else:
-            print("This command is not available.")
+            reply = fallback(cmd)
+            print(reply)
+            speak(reply)

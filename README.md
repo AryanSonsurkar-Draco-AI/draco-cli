@@ -25,11 +25,15 @@ Currently supports opening commonly used developers and social websites.More sit
 - datetime command with formatted date and time
 - Notes Management
 - Reminder System
-- Self-Introduction
+- Self-Introduction and system-identity response
+- AI-Powered calculator using ollama
+- AI Fallback
 
 ---
 
 ## How to Run
+Download and ollama (llama3) as it is the brain of draco.
+
 1. Clone the repository
 2. Install the dependiences: pip install -r requirements.txt
 3. Run the project: python main.py
