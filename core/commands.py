@@ -6,6 +6,7 @@ from modules.commands.notes import notes
 from modules.commands.reminder import remind
 from modules.commands.calc_gen import generate_calculator_code,solve_calculator
 from modules.commands.fallback import fallback
+from modules.commands.essay_writer import essay_writer
 
 def command_prompt():
     while True:
@@ -97,6 +98,11 @@ def command_prompt():
             answer = solve_calculator(cmd)
             print(answer)
             speak("Here are the results.")
+        
+        elif "create an essay on" in cmd:
+            essay = essay_writer(cmd)
+            print(essay)
+            speak("Here is your essay....")
 
         else:
             reply = fallback(cmd)

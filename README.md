@@ -28,6 +28,7 @@ Currently supports opening commonly used developers and social websites.More sit
 - Self-Introduction and system-identity response
 - AI-Powered calculator using ollama
 - AI Fallback
+- Essay Writer
 
 ---
 
