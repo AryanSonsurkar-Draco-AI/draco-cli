@@ -1,16 +1,17 @@
 from core.tts import speak
-from modules.commands.web_apps import web_commands
-from modules.commands.jokes import jokes
-from modules.commands.system import system_status, datetime_info
-from modules.commands.notes import notes
-from modules.commands.reminder import remind
+from modules.Brain.web_apps import web_commands
+from modules.Brain.jokes import jokes
+from modules.Brain.system import system_status, datetime_info
+from modules.Brain.notes import notes
+from modules.Brain.reminder import remind
 from modules.Ollama.generators.calc_gen import generate_calculator_code,solve_calculator
 from modules.Ollama.fallback import fallback
 from modules.Ollama.writers.essay_writer import essay_writer
 from modules.Ollama.writers.explainer import explainer,motivater
 from modules.Ollama.generators.algo_gen import algo_gen
 from modules.Ollama.writers.analyzer import analyze
-from modules.Ollama.generators.git_gen import git_push, git_repo
+from modules.Automations.git_helper import git_push, git_repo
+from modules.Automations.file_opener import open_file_or_folder
 
 def command_prompt():
     while True:
@@ -37,7 +38,7 @@ def command_prompt():
             print("I can automate things for you..This is my feature list:-\nIntroduction of myself\ncan speak output\n")
             speak("I can automate things for you..This is my feature list")
 
-        elif "open" in cmd:
+        elif cmd.startswith("open website"):
             web_commands(cmd)
         
         elif "joke" in cmd:
@@ -141,6 +142,18 @@ def command_prompt():
             git_cmd = git_repo()
             print(git_cmd)
             speak("Bro just make a new repo with this and let's hit that consistency bar on top.")
+        
+        elif cmd.startswith("open file"):
+            name = cmd.replace("open file","").strip()
+            reply = open_file_or_folder(name)
+            print(reply)
+            speak(reply)
+
+        elif cmd.startswith("open folder"):
+            name = cmd.replace("open folder","").strip()
+            reply = open_file_or_folder(name)
+            print(reply)
+            speak(reply)
 
         else:
             reply = fallback(cmd)
