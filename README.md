@@ -32,7 +32,10 @@ Currently supports opening commonly used developers and social websites.More sit
 - Explainer mode
 - Motivator
 - Think mode
+- File/Folder Opener
 - Essay Writer
+- Daily reflector
+- GIT helper
 
 ---
 
@@ -48,8 +51,8 @@ Download ollama (llama3) as it is the brain of draco.
 ## Example Commands
 - who are you
 - who created you
-- open github
-- open youtube
+- open website github
+- open website youtube
 - joke
 - system info or my pc
 - date or time

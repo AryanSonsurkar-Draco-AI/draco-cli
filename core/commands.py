@@ -12,6 +12,7 @@ from modules.Ollama.generators.algo_gen import algo_gen
 from modules.Ollama.writers.analyzer import analyze
 from modules.Automations.git_helper import git_push, git_repo
 from modules.Automations.file_opener import open_file_or_folder
+from modules.Ollama.writers.reflector import reflect
 
 def command_prompt():
     while True:
@@ -152,6 +153,12 @@ def command_prompt():
         elif cmd.startswith("open folder"):
             name = cmd.replace("open folder","").strip()
             reply = open_file_or_folder(name)
+            print(reply)
+            speak(reply)
+        
+        elif cmd=="daily reflection" or cmd=="reflect today" or cmd=="rate today" or cmd=="Today was a great day":
+            reply = reflect()
+            print("\n----------Draco Report----------\n")
             print(reply)
             speak(reply)
 
