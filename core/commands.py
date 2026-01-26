@@ -14,6 +14,7 @@ from modules.Automations.git_helper import git_push, git_repo
 from modules.Automations.file_opener import open_file_or_folder
 from modules.Ollama.writers.reflector import reflect
 from modules.Automations.typer import draco_type
+from modules.Automations.web_searcher import draco_search
 
 def command_prompt():
     while True:
@@ -170,6 +171,10 @@ def command_prompt():
             else:
                 print("\nPlease provide what to type.\n")
                 speak("Please provide what to type.")
+        
+        elif cmd.startswith("search"):
+            cmd = cmd.replace("search","").strip()
+            draco_search(cmd)
 
         else:
             reply = fallback(cmd)

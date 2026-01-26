@@ -1,5 +1,29 @@
 import webbrowser
 from core.tts import speak
+from ddgs import DDGS
+
+def web_search(cmd,max_result=5):
+    results=[]
+
+    with DDGS() as ddgs:
+        for r in ddgs.text(cmd,max_result=max_result):
+            results.append({
+                "title": r.get("title",""),
+                "body": r.get("body",""),
+                "link": r.get("href","")
+            })
+    
+    return results
+
+def format_results(results):
+    text = ""
+    for i,r in enumerate(results,start=1):
+        text+=f"""
+        Result {i}:
+        Title: {r['title']}
+        Info: {r['body'] if r['body'] else "No description available"}
+        """
+    return text.strip()
 
 def web_commands(cmd):
     if cmd=="open website chatgpt":

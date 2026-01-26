@@ -36,7 +36,8 @@ Currently supports opening commonly used developers and social websites.More sit
 - Essay Writer
 - Daily reflector
 - GIT helper
-- Human-Like Typing Automation (AI-generated content typed character-by-character into notepad)
+- Human-Like Typing Automation: AI-generated content typed character-by-character into notepad
+- Smart Web Search: Searches the internet,analyzes top results using AI, and explains them in simple language
 
 ---
 
