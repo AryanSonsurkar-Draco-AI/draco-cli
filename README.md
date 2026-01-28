@@ -40,12 +40,18 @@ Instead of creating small isolated scripts, Draco is designed as a real, extensi
 - Human-like typing automation where AI-generated content is typed character by character - into Notepad
 - Smart web search that searches the internet, analyzes top results using AI, and explains - them in simple language
 - End-of-Day Wind Up system that closes active workspace tasks, secures the system, and  allows the user to choose between shutting down or locking the system
-- How to Run
-- Draco uses Ollama (llama3) as its AI engine.
-- Clone the repository
-- Install dependencies using the requirements file
-- Run the project using the main Python file
-- Example Commands
+
+---
+
+## How to Run
+1. Draco uses Ollama (llama3) as its AI engine.
+2. Clone the repository
+3. Install dependencies using the requirements file
+4. Run the project using the main Python file
+
+---
+
+## Example Commands
 - who are you
 - who created you
 - open website github
@@ -60,9 +66,12 @@ Instead of creating small isolated scripts, Draco is designed as a real, extensi
 - introduce or introduce yourself
 - end of the day
 - help
-- Status
-- Work in progress.
-- New commands, improved structure, and more advanced automation features will be added over  time.
+
+---
+
+## Status
+Work in progress.
+New commands, improved structure, and more advanced automation features will be added over  time.
 
 ---
 
