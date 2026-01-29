@@ -1,8 +1,6 @@
 ## draco-cli
 Draco is a command-line assistant built step by step while learning Python.
-
 The project focuses on writing clean, modular code and gradually adding powerful automation and AI-driven features.
-
 Instead of creating small isolated scripts, Draco is designed as a real, extensible CLI tool with practical use cases.
 
 ---
@@ -40,6 +38,7 @@ Instead of creating small isolated scripts, Draco is designed as a real, extensi
 - Human-like typing automation where AI-generated content is typed character by character - into Notepad
 - Smart web search that searches the internet, analyzes top results using AI, and explains - them in simple language
 - End-of-Day Wind Up system that closes active workspace tasks, secures the system, and  allows the user to choose between shutting down or locking the system
+- Quick Actions Hub (Automating setup)
 
 ---
 
@@ -65,6 +64,7 @@ Instead of creating small isolated scripts, Draco is designed as a real, extensi
 - remind me to study in 2 hours
 - introduce or introduce yourself
 - end of the day
+- open coding setup
 - help
 
 ---

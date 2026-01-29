@@ -16,6 +16,7 @@ from modules.Ollama.writers.reflector import reflect
 from modules.Automations.typer import draco_type
 from modules.Automations.web_searcher import draco_search
 from modules.Automations.winding_up_system import wind_up
+from modules.Automations.quick_actions import open_coding_setuo,open_exam_setup,open_study_setup
 
 def command_prompt():
     while True:
@@ -179,8 +180,17 @@ def command_prompt():
         
         elif "end of the day" in cmd:
             wind_up()
+        
+        elif cmd=="study setup" or cmd=="open study setup":
+            open_study_setup()
+
+        elif cmd=="coding setup" or cmd=="open coding setup":
+            open_coding_setuo()
+
+        elif cmd=="exam prep setup" or cmd=="open exam prep setup" or cmd=="let's study for exam":
+            open_exam_setup()
 
         else:
             reply = fallback(cmd)
             print(reply)
-            speak(reply)
+            speak(reply) 
