@@ -8,7 +8,9 @@ def close_apps():
     time.sleep(1)
     print("\nClosing active applications...\n")
     speak("Closing active applications")
-    os.system("taskkill /f /im explorer.exe")
+    apps = ["chrome.exe","spotify.exe"]
+    for app in apps:
+        os.system(f"taskkill /f /im {app}")
 
 def shutdown_system():
     print("\nShutting down system. Good work today.\n")
