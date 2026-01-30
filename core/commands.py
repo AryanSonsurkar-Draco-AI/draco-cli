@@ -179,7 +179,7 @@ def command_prompt():
             cmd = cmd.replace("search","").strip()
             draco_search(cmd)
         
-        elif "end of the day" in cmd:
+        elif "end of the day" in cmd or "wind up" in cmd:
             wind_up()
         
         elif cmd=="study setup" or cmd=="open study setup":
