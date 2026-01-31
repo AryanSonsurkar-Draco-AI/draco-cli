@@ -1,7 +1,7 @@
 import speech_recognition as sr
 from core.tts import speak
 
-def listen_cmd(timeout=10):
+def listen_cmd(timeout=5):
     r = sr.Recognizer()
 
     with sr.Microphone() as source:
