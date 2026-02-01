@@ -15,6 +15,7 @@ Instead of creating small isolated scripts, Draco is designed as a real, extensi
 
 ## Features
 - Interactive command-line interface
+- Text/Voice Mode (both are available)
 - Predefined conversational commands (e.g., "who are you", "who created you")
 - Text-to-Speech (TTS) support using pyttsx3
 - Modular architecture (commands, tts, main, automations)
@@ -40,6 +41,7 @@ Instead of creating small isolated scripts, Draco is designed as a real, extensi
 - End-of-Day Wind Up system that closes active workspace tasks, secures the system, and  allows the user to choose between shutting down or locking the system
 - Quick Actions Hub (Automating setup)
 - Arrival Routine (Jarvis Mode)
+- macro feature
 ---
 
 ## How to Run

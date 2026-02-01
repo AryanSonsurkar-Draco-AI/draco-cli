@@ -21,6 +21,7 @@ from modules.Automations.quick_actions import open_coding_setuo,open_exam_setup,
 from modules.Automations.jarvis_theme import jarvis
 from modules.Brain.voice_listener import listen_cmd
 from core import state
+from modules.Automations.macros_runner import list_macros, show_macro, run_macro
 
 def choose_mode():
     if state.INPUT_MODE is None:
@@ -211,6 +212,27 @@ def handle_command(cmd):
 
         elif "daddy's home" in cmd or "I am back" in cmd or "iron man mode" in cmd or "wake up draco" in cmd:
             jarvis()
+        
+        elif cmd.startswith("macro"):
+            parts = cmd.split()
+
+            if len(parts) == 1 or parts[1] == "help":
+                print("Usage:")
+                print("macro list")
+                print("macro show <name>")
+                print("macro <name>")
+    
+            elif parts[1] == "list":
+                list_macros()
+
+            elif parts[1] == "show" and len(parts) == 3:
+                show_macro(parts[2])
+
+            elif len(parts) == 2:
+                run_macro(parts[1], handle_command)
+
+            else:
+                print("Invalid macro command.")
 
         else:
             reply = fallback(cmd)
